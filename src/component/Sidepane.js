@@ -18,7 +18,7 @@ const Sidepane = () => {
           <img src={logo} alt="landa logo" />
         </div>
         <div className="menu-section">
-          <NavLink to="/">
+          <NavLink to="/dashboard">
           <div className="dashboard-menu"  >
                 <div className="menu-icon">
                 <MdOutlineDashboard size={20}/>
@@ -46,7 +46,7 @@ const Sidepane = () => {
             Learning
             </div>
         </div></NavLink>
-       <NavLink to="/assesments/assesment">
+       <NavLink to="/assesment">
        <div className="dashboard-menu">
                 <div className="menu-icon">
                 <BsFileEarmarkText size={20}/>
