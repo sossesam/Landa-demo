@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-pane{
+  background-color:#F6F9FD;
+  border-right: 1px solid #E6E6E6;
+  backdrop-filter: blur(30px);
+  width: 270px;
+  height: 99vh;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.menu-icon, .menu-title{
+  margin: 10px;
+}
+.menu-section{
+  margin-top: 77px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dashboard-menu{
+  display: flex;
+}
+.dashboard-menu:hover{
+  background-color: #DDE7F8;
+  cursor: pointer;
+}
+.dashboard-logout{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 300px;
+
+  
+}
+.page-nav{
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 88px;
+  left: 270px;
+  padding: 30px;
+
+  
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #E6E6E6;
+  backdrop-filter: blur(30px);
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+
+}
+.person-icon{
+  display: flex;
+  align-items: center;
+}
+.person{
+  margin-right: 15px;
+}
+.drop-down{
+  stroke-width: 1;
+}
+.menu-title{
+  font-size: 16px;
+  font-weight: 400;
+  align-self: center;
+}
+.main-nav{
+ display: flex;
+ margin: 30px;
+}
+.nav-menu{
+  margin-right: 30px;
+  padding: 15px;
+  font-weight: 400px;
+  font-size: 16px;
+  color: #959595;;
+}
+.nav-menu:hover{
+  background: #EEF3FC;
+  color: black;
+  font-weight: 500;
+}
+.active{
+  background: #EEF3FC;
+  color: black;
+  font-weight: 500;
+}
+.main-content{
+  margin:5px;
+                padding:5px;
+                width: 1200px;
+                height: 600px;
+                overflow: auto;
+                text-align:justify;
+}
+.empty-content{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+.cap{
+  background-color: #EEF3FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66px;
+  width: 66px;
+  padding: 10px;
+  border-radius: 62px;
+  stroke-width: 1;
+  color: #004CCC;
+  margin-bottom: 40px;
+}
+.content-text{
+  margin-bottom: 50px;
+}
+.content-button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 24px;
+gap: 8px;
+background-color: #004CCC;
+width: 156px;
+height: 48px;
+color: white;
+flex: none;
+order: 2;
+flex-grow: 0;
+border-width: 0px;
+cursor: pointer;
+}
+
+.sbj-table{
+  width: 1000px;
+  border: solid #E6E6E6 1px;
+  height: 500px;
+  margin-top: 70px;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.dataSpace{
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.school{
+  width: 200px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border: none;
+  padding: 10px;
+  border: solid 
+  #CCCCCC 1px;
+}
+
+.search{
+  display: flex;
+  padding: 5px;
+  margin: 5px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: solid 
+  #CCCCCC 1px;
+  margin-right: 30px;
+}
+.search input{
+  padding: 10px;
+  margin-left: 10px;
+  width: 400px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.schools{
+  width: 170px;
+  padding: 5px;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+th{
+  width: 200px;
+  border-bottom:1px solid  #DDE7F8;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px;
+}
+tr{
+  border-bottom:1px solid  #DDE7F8;
+  box-shadow: inset 0px -1px 0px #E1E3E5;
+}
+td{
+  font-size: 14px;
+  border: none;
+  padding: 10px;
+}
+
+.dot{
+  margin: 15px;
+  position:relative;
+}
+
+.table-data:nth-child(odd){background-color:#F8F9FC;}
+
+.modal-content {
+  position:absolute;
+  margin-left: 10px;
+  background:#FFFFFF;
+  z-index: 1;
+  bottom: 150%;
+  left: 100%;
+  border: 1px solid #F1F3F9;
+}
+.modal, .overlay, .fulloverlay  {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+.dotModal{
+  width: 150px;
+  border-bottom: 1px solid #F1F3F9;
+  padding: 10px;
+  cursor: pointer;
+
+}
+.dotModal:hover{
+  background-color: #DDE7F8;
+}
+.overlay {
+  background: rgba(49, 49, 49, 0);
+  z-index: -1;
+}
+
+
+.fulloverlay {
+  background: rgba(49,49,49,0.8);
+}
+.the-form{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f1f1f1;
+    border-radius: 3px;
+    width: 600px;
+}
+
+.formTitle{
+  padding: 20px;
+  font-weight: 800;
+font-size: 16px;
+border-bottom: 1px solid black;
+}
+.formdiv{
+  margin-top: 10px;
+  padding: 10px;
+}
+::placeholder{
+  font-size: 16px;
+}
+input, .modal-school{
+  padding: 20px;
+  width: 550px;
+  border: none;
+  margin-top: 10px;
+}
+
+
+.add-area{
+  margin-bottom: 50px;
+  margin-top: 100px;
+  text-align: center;
+  color: blue;
+  border: 1px dashed blue;
+  padding: 20px;
+  cursor: pointer;
+
+}
+.modal-school{
+  background-color: white;
+}
+.modal-schools{
+  width: 100%;
+  border: none;
+  padding: 5px;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
